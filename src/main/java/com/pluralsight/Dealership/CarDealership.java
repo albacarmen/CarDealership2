@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.Dealership;
 
 public class CarDealership {
     public static void main(String[] args) {

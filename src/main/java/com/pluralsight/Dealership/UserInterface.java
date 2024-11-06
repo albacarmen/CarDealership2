@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.Dealership;
 
 import java.util.List;
 import java.util.Scanner;

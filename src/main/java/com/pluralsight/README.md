@@ -7,7 +7,7 @@ The
 - As a user, I want an intuitive interface to input contract details and ensure my vehicle inventory is updated accordingly.
 
 ## Getting Started
-
+OPEN
 ## Prerequisites
 
 ## Technologies Utilized

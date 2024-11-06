@@ -2,6 +2,7 @@ package com.pluralsight.Dealership;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Dealership {
     private String name;
@@ -43,29 +44,23 @@ public class Dealership {
     public List<Vehicle> getVehiclesByPrice(double min, double max) {
         return inventory.stream()
                 .filter(vehicle -> vehicle.getPrice() >= min && vehicle.getPrice() <= max)
-                .collect(Collectors.toList()); 
+                .collect(Collectors.toList());
     }
 
 
     public List<Vehicle> getVehiclesByMakeModel(String make, String model) {
-        List<Vehicle> matchingVehicles = new ArrayList<>();
-        for (Vehicle vehicle : inventory) {
-            if (vehicle.getMake().equalsIgnoreCase(make) && vehicle.getModel().equalsIgnoreCase(model)) {
-                matchingVehicles.add(vehicle);
-            }
-        }
-        return matchingVehicles;
+        return inventory.stream()
+                .filter(vehicle -> vehicle.getMake().equalsIgnoreCase(make) && vehicle.getModel().equalsIgnoreCase(model))
+                .collect(Collectors.toList());
     }
 
+
     public List<Vehicle> getVehiclesByYear(int min, int max) {
-        List<Vehicle> matchingVehicles = new ArrayList<>();
-        for (Vehicle vehicle : inventory) {
-            if (vehicle.getYear() >= min && vehicle.getYear() <= max) {
-                matchingVehicles.add(vehicle);
-            }
-        }
-        return matchingVehicles;
+        return inventory.stream()
+                .filter(vehicle -> vehicle.getYear() >= min && vehicle.getYear() <= max)
+                .collect(Collectors.toList());
     }
+
 
     public List<Vehicle> getVehiclesByColor(String color) {
         List<Vehicle> matchingVehicles = new ArrayList<>();

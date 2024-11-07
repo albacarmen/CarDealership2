@@ -1,3 +1,5 @@
+
+package com.pluralsight.Contracts;
 import com.pluralsight.Dealership.Vehicle;
 
 public abstract class Contract {

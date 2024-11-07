@@ -81,6 +81,15 @@ public class Dealership {
                 .filter(vehicle -> vehicle.getVehicleType().equalsIgnoreCase(vehicleType))
                 .collect(Collectors.toList());
     }
+    public Vehicle getVehicleByVin(int vin) {
+        for (Vehicle vehicle : inventory) {
+            if (vehicle.getVin() == vin) {
+                return vehicle;
+            }
+        }
+        return null;
+    }
+
 
 
     public List<Vehicle> getAllVehicles() {

@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18c44f5a-1dcd-496d-a2b6-5aecc7a20e97" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Contracts/ContractFileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Contracts/ContractFileManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/contracts (1).csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/contracts.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/contracts_with_headings (1).csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/contractswithheadings.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/dealership (1) - Copy.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/dealership.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership/Dealership.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership/Dealership.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership/UserInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,5 +79,17 @@
       <updated>1730483963089</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/main/java/com/pluralsight/Dealership/Vehicle.java</url>
+          <line>3</line>
+          <properties field="vin" class="com.pluralsight.Dealership.Vehicle" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

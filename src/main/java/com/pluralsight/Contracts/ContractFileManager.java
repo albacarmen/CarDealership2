@@ -59,5 +59,16 @@ public class ContractFileManager {
                 .max(Comparator.comparingDouble(Contract::getTotalPrice))
                 .orElse(null); // Return null if no contracts exist
     }
+
+    private static final String FILE_PATH = "contracts.csv";
+
+    // Method to save the contract to a file
+    public void saveContract(Contract contract) {
+        try (FileWriter writer = new FileWriter(new File(FILE_PATH), true)) {
+            writer.write(contract.toString() + "\n");
+        } catch (IOException e) {
+            System.err.println("Error saving contract: " + e.getMessage());
+        }
+    }
 }
 

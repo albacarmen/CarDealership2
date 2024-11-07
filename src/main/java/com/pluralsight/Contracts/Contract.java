@@ -2,14 +2,48 @@
 package com.pluralsight.Contracts;
 import com.pluralsight.Dealership.Vehicle;
 
-public abstract class Contract {
-    private Vehicle vehicleSold;
-    private double salesTaxAmount;
-    private double recordingFee;
-    private double processingFee;
-    private boolean financeOption;
 
-    // Getters and Setters
+
+public abstract class Contract {
+    private String date;
+    private String customerName;
+    private String customerEmail;
+    private Vehicle vehicleSold;
+    private double totalPrice;
+    private double monthlyPayment;
+
+
+    public Contract(String date, String customerName, String customerEmail, Vehicle vehicleSold) {
+        this.date = date;
+        this.customerName = customerName;
+        this.customerEmail = customerEmail;
+        this.vehicleSold = vehicleSold;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public String getCustomerEmail() {
+        return customerEmail;
+    }
+
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
+    }
+
     public Vehicle getVehicleSold() {
         return vehicleSold;
     }
@@ -18,40 +52,11 @@ public abstract class Contract {
         this.vehicleSold = vehicleSold;
     }
 
-    public double getSalesTaxAmount() {
-        return salesTaxAmount;
-    }
-
-    public void setSalesTaxAmount(double salesTaxAmount) {
-        this.salesTaxAmount = salesTaxAmount;
-    }
-
-    public double getRecordingFee() {
-        return recordingFee;
-    }
-
-    public void setRecordingFee(double recordingFee) {
-        this.recordingFee = recordingFee;
-    }
-
-    public double getProcessingFee() {
-        return processingFee;
-    }
-
-    public void setProcessingFee(double processingFee) {
-        this.processingFee = processingFee;
-    }
-
-    public boolean isFinanceOption() {
-        return financeOption;
-    }
-
-    public void setFinanceOption(boolean financeOption) {
-        this.financeOption = financeOption;
-    }
-
-    // Abstract Methods for Subclasses
     public abstract double getTotalPrice();
+
     public abstract double getMonthlyPayment();
+
+    @Override
+    public abstract String toString();
 }
 

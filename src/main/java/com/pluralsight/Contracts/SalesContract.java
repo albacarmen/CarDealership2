@@ -49,7 +49,7 @@ public class SalesContract extends Contract {
         return monthlyPayment;
     }
 
-    
+
     @Override
     public String toString() {
         return "SALE|" + getDate() + "|" + getCustomerName() + "|" + getCustomerEmail() + "|"

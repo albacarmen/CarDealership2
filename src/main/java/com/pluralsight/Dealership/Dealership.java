@@ -63,34 +63,25 @@ public class Dealership {
 
 
     public List<Vehicle> getVehiclesByColor(String color) {
-        List<Vehicle> matchingVehicles = new ArrayList<>();
-        for (Vehicle vehicle : inventory) {
-            if (vehicle.getColor().equalsIgnoreCase(color)) {
-                matchingVehicles.add(vehicle);
-            }
-        }
-        return matchingVehicles;
+        return inventory.stream()
+                .filter(vehicle -> vehicle.getColor().equalsIgnoreCase(color))
+                .collect(Collectors.toList());
     }
+
 
     public List<Vehicle> getVehiclesByMileage(int min, int max) {
-        List<Vehicle> matchingVehicles = new ArrayList<>();
-        for (Vehicle vehicle : inventory) {
-            if (vehicle.getOdometer() >= min && vehicle.getOdometer() <= max) {
-                matchingVehicles.add(vehicle);
-            }
-        }
-        return matchingVehicles;
+        return inventory.stream()
+                .filter(vehicle -> vehicle.getOdometer() >= min && vehicle.getOdometer() <= max)
+                .collect(Collectors.toList());
     }
 
+
     public List<Vehicle> getVehiclesByType(String vehicleType) {
-        List<Vehicle> matchingVehicles = new ArrayList<>();
-        for (Vehicle vehicle : inventory) {
-            if (vehicle.getVehicleType().equalsIgnoreCase(vehicleType)) {
-                matchingVehicles.add(vehicle);
-            }
-        }
-        return matchingVehicles;
+        return inventory.stream()
+                .filter(vehicle -> vehicle.getVehicleType().equalsIgnoreCase(vehicleType))
+                .collect(Collectors.toList());
     }
+
 
     public List<Vehicle> getAllVehicles() {
         return inventory;
